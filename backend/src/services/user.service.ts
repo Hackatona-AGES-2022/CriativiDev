@@ -31,6 +31,13 @@ export async function getById(id: number): Promise<ApiResponse | ApiError>{
   }
 }
 
-export async function login(email: string): Promise<User>{
-  return repository.findByEmail(email);
+export async function login(email: string): Promise<ApiResponse | ApiError> {
+  try {
+    return ApiResponse.createApiResponse(
+      'User logged in successfully',
+      await repository.findByEmail(email)
+    );
+  } catch(err: any) {
+    return ApiError.createApiError(err.message, 401);
+  }
 }

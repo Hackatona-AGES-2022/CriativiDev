@@ -1,4 +1,5 @@
 import { Router, Request, Response } from "express";
+import ApiError from "../models/apiError";
 import * as service from "../services/user.service";
 
 
@@ -8,11 +9,12 @@ router.post(
   '/',
   async (req: Request, res: Response) => {
     const { email } = req.body;
-    try {
-      res.status(200).json(await service.login(email));
-    } catch(err) {
-      throw err;
+    const response = await service.login(email);
+    if (response instanceof ApiError) {
+      const { code, ...responseData } = response;
+      return res.status(code).json(responseData);
     }
+    return res.json(response);
   }
 )
 

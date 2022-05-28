@@ -58,7 +58,7 @@ export async function findByEmail(email: string): Promise<User>{
     .first();
 
   if(!userData) {
-    throw ApiError.createApiError('User not found', 500);
+    throw new Error(`User with email ${email} does not exist`);
   }
 
   return userData as User;
