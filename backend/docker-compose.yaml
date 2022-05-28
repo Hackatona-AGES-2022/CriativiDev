@@ -1,0 +1,17 @@
+version: '3.7'
+
+services:
+  postgres:
+    container_name: criatividev_postgres
+    image: postgres
+    ports:
+      - 5432:5432
+    environment:
+      POSTGRES_USER: criatividev
+      POSTGRES_PASSWORD: criatividev
+      POSTGRES_DB: criatividev
+    volumes:
+      - postgres_data_container:/data/db
+
+volumes:
+  postgres_data_container:
