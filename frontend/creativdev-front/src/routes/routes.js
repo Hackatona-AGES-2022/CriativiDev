@@ -18,7 +18,8 @@ export default function Routes() {
                                 <Redirect to='/home' />
             </Route>
                 <Route exact path='/home' component={Homescreen} />
-                <Route exact path='/login-doador' component={TelaDoadorLogado} />
+                
+                <Route exact path='/doador-logado' component={TelaDoadorLogado} />
 
                
             </Switch>

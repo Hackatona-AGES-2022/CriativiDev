@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useContext } from "react";
 import { HeaderDonator } from '../containers/Header';
 import { BtnSalvar, BtnFechar } from "../components/Botoes";
+import { Card } from "../components/Card";
 
 
 
@@ -28,6 +29,7 @@ const TelaDoadorLogado =()=>{
     <div className="container-fluid">
         
         <HeaderDonator/>
+        <Card/>
 
     </div>
   
