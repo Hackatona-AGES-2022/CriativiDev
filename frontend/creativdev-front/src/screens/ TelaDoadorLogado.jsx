@@ -38,7 +38,7 @@ const TelaDoadorLogado =()=> {
         },
     }
 
-    const [categories, setCategories] = useState('');
+    const [categories, setCategories] = useState([]);
     const [user, setUser] = useState('');
 
     useEffect(() => {
@@ -84,9 +84,9 @@ const TelaDoadorLogado =()=> {
             <div style={styles.teste}>
                 <div>
         <h1>Minhas Doações</h1>
-        <h4>Pontuação total: 200 pontos</h4>
+        <h4>{`Pontuação total: ${user.totalPoints || 0} pontos`}</h4>
         </div>
-        <a class="plus-donate" href="#">        
+        <a class="plus-donate" href="/cadastro-doacao">        
             <img src={plus} alt="" width="50" height="38" style={styles.spacingPlusButton} />
         </a>
 
@@ -111,35 +111,17 @@ const TelaDoadorLogado =()=> {
                         </tr>
                     </thead>
                     <tbody className='text-center font-weight-bold'>
-                    <tr>
-    
-                        <td>Monitor</td>
-                        <td>50</td>
-                    </tr>
-                    <tr>
-                        
-                        <td>Celular</td>
-                        <td>70</td>
-                    </tr>
-                    <tr>
-                        
-                        <td>Tablet</td>
-                        <td>70</td>
-                    </tr>
-                    <tr>
-                        
-                        <td>Desktop</td>
-                        <td>100</td>
-                    </tr>
-                    <tr>
-                        
-                        <td>Notebook</td>
-                        <td>100</td>
-                    </tr>
+                    {categories.map((category) => {
+                        return (
+                          <tr>
+                            <td>{category.name}</td>
+                            <td>{category.points}</td>
+                          </tr>
+                        );
+                    })}
                     </tbody>
                 </table></div>
-
-</div>
+        </div>
     </div>
     </div>
         
