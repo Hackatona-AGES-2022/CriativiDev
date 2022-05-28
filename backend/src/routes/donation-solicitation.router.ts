@@ -40,4 +40,17 @@ router.get(
   }
 );
 
+router.get(
+  '/finishedSolicitations/:userId',
+  async (req: Request, res: Response) => {
+    const userId: number = Number(req.params.userId);
+    const response = await donationSolicitacaoService.getByReceiverId(userId);
+    if (response instanceof ApiError) {
+      const { code, ...responseData } = response;
+      return res.status(code).json(responseData);
+    }
+    return res.json(response);
+  }
+);
+
 export default router;

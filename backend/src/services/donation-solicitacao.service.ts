@@ -34,3 +34,14 @@ export async function getBySolicitationId(id: number) {
     return ApiError.createApiError(err.message, 400);
   }
 }
+
+export async function getByReceiverId(id: number) {
+  try {
+    return ApiResponse.createApiResponse(
+      'Donation and solicitation link found successfully',
+      await donationSolicitacaoRepository.findByReceiverId(id)
+    );
+  } catch(err: any) {
+    return ApiError.createApiError(err.message, 400);
+  }
+}
