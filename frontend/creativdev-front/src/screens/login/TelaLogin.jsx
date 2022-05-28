@@ -12,7 +12,7 @@ export const TelaLogin = () => {
   const handleSubmit = async () => {
     try {
       const loginResponse = await authClient(email);
-      sessionStorage.setItem("user", loginResponse);
+      sessionStorage.setItem("user", JSON.stringify(loginResponse));
       if (loginResponse.type === "DOADOR") navigate("/doador-logado");
       else if (loginResponse.type === "RECEPTOR") navigate("/receptor-logado");
     } catch (err) {

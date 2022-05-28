@@ -1,7 +1,6 @@
 import React from 'react';
 import { BrowserRouter, Routes as ReactRoutes, Route } from 'react-router-dom';
 
-
 // Páginas
 import { Homescreen } from '../screens/Homescreen';
 import TelaDoadorLogado from '../screens/ TelaDoadorLogado';

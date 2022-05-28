@@ -1,11 +1,13 @@
 import React, { useState, useEffect, useContext } from "react";
+import { getAllCategories } from "../services/category";
+import { getUserById } from "../services/user";
 import { HeaderDonator } from '../containers/Header';
 import { BtnSalvar, BtnFechar } from "../components/Botoes";
 import { Card } from "../components/Card";
 import plus from "../assets/plus.png"
 
 
-const TelaDoadorLogado =()=>{
+const TelaDoadorLogado =()=> {
 
     const styles = {
         bgTable:{
@@ -27,8 +29,40 @@ const TelaDoadorLogado =()=>{
         spacingPlusButton: {
             paddingLeft: "12px",
         },
-     
     }
+
+    const [categories, setCategories] = useState('');
+    const [user, setUser] = useState('');
+
+    useEffect(() => {
+        const sessionUser = JSON.parse(sessionStorage.getItem("user") || "{}");
+        const getCategories = async () => {
+          try {
+            const getCategoriesResponse = await getAllCategories();
+            setCategories(getCategoriesResponse);
+          } catch (err) {
+            console.log(err);
+          }
+        };
+        const getUser = async () => {
+          try {
+            const getUserResponse = await getUserById(sessionUser.id);
+            setUser(getUserResponse);
+          } catch (err) {
+            console.log(err);
+          }
+        };
+        const getDonations = async () => {
+            try {
+              const getUserResponse = await getUserById(sessionUser.id);
+              setUser(getUserResponse);
+            } catch (err) {
+              console.log(err);
+            }
+        };
+        getCategories();
+        getUser();
+    }, []);
 
     return(
     <div className="container-fluid">
