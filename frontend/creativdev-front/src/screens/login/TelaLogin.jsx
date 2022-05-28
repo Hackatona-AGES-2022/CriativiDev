@@ -47,7 +47,7 @@ export const TelaLogin = () => {
             class="entrada"
             value={senha}
             onChange={(e) => setSenha(e.target.value)}
-            placeholder="Digite seu e-mail"
+            placeholder="Digite sua senha"
           />
           <p className="p-meu">
             <a className="meu-a" href="/cadastro">
