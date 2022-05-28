@@ -1,7 +1,7 @@
 import React from 'react';
 export const Card = () => {return(
     <div className="Card">
-    <div class="col-sm-6">
+    <div class="col-sm-6 pb-3">
         <div class="card">
             <div class="card-body">
                 <h5 class="card-title">Periférico</h5>
