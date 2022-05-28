@@ -1,6 +1,7 @@
 import { convertStringToDate } from "../utils/date.utils";
-import { CreateUserPayload, User } from "../models/user";
-import * as repository from "../repositories/user.repository"
+import { CreateUserPayload, User, UserType } from "../models/user";
+import * as repository from "../repositories/user.repository";
+import { findPointsByDonatorId } from "../repositories/donation.repository";
 import ApiError from "../models/apiError";
 import ApiResponse from "../models/apiResponse";
 
@@ -19,11 +20,24 @@ export async function getAll(): Promise<ApiResponse>{
 
 export async function getById(id: number): Promise<ApiResponse | ApiError>{
   try {
+    const userData = await repository.findById(id);
+    const totalPoints = (userData.type === UserType.DOADOR) ? await findPointsByDonatorId(id) : 0;
     return ApiResponse.createApiResponse(
       'User found successfully',
-      await repository.findById(id)
+      { totalPoints, ...userData }
     );
   } catch(err: any) {
     return ApiError.createApiError(err.message, 400);
+  }
+}
+
+export async function login(email: string): Promise<ApiResponse | ApiError> {
+  try {
+    return ApiResponse.createApiResponse(
+      'User logged in successfully',
+      await repository.findByEmail(email)
+    );
+  } catch(err: any) {
+    return ApiError.createApiError(err.message, 401);
   }
 }

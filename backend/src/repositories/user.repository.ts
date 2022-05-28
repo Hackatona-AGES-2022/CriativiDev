@@ -4,7 +4,7 @@ import { User } from "../models/user";
 
 const uniqueViolationCode = '23505';
 
-const fields = ['id', 'name', 'document', 'email', 'birth_date', 'cep', 'password'];
+const fields = ['id', 'name', 'document', 'email', 'birth_date', 'cep', 'password', 'type'];
 const tableName: string = 'users';
 
 export async function create(user: User): Promise<User | ApiError>{
@@ -45,6 +45,20 @@ export async function findById(id: number): Promise<User>{
 
   if (!userData) {
     throw new Error(`User with id ${id} does not exist`);
+  }
+
+  return userData as User;
+}
+
+export async function findByEmail(email: string): Promise<User>{
+  const userData = await db<User>(tableName)
+    .select(fields)
+    .where({ email })
+    .returning(fields)
+    .first();
+
+  if(!userData) {
+    throw new Error(`User with email ${email} does not exist`);
   }
 
   return userData as User;

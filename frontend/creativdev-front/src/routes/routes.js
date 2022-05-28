@@ -10,6 +10,8 @@ import {
 import { Homescreen } from '../screens/Homescreen';
 import TelaDoadorLogado from '../screens/ TelaDoadorLogado';
 import { TelaLogin } from '../screens/login/TelaLogin';
+import {Cadastro} from '../screens/cadastro/Cadastro';
+
 
 export default function Routes() {
     return (
@@ -21,9 +23,7 @@ export default function Routes() {
                 <Route exact path='/home' component={Homescreen} />               
                 <Route exact path='/doador-logado' component={TelaDoadorLogado} />
                 <Route exact path='/login-doador' component={TelaLogin} />
-
-
-               
+                <Route exact path='/cadastro' component={Cadastro} />
             </Switch>
         </Router>
     )

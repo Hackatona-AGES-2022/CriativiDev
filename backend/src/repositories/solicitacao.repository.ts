@@ -20,6 +20,10 @@ export async function findById(request_id:number): Promise<Solicitacao>{
     .returning(visibleFields)
     .first();
 
+  if (!solicitacaoData) {
+    throw new Error(`Solicitation with id ${request_id} does not exist`);
+  }
+
   return solicitacaoData as Solicitacao;
 }
 
