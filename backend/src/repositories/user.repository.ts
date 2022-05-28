@@ -1,5 +1,5 @@
-import db from "config/database";
-import { User } from "models/user";
+import db from "../config/database";
+import { User } from "../models/user";
 
 const visibleFields = ['id', 'name', 'document', 'email', 'birth_date', 'cep', 'password'];
 

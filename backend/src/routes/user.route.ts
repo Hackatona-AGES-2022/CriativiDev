@@ -12,9 +12,11 @@ router.get(
 )
 
 router.get(
-  '/id',
+  '/:id',
   async (req: Request, res: Response) => {
     const id: number = Number(req.params.id);
     return res.json(await service.getById(id));
   }
 )
+
+export default router;
