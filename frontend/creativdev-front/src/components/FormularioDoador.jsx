@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useContext } from "react";
+import { BtnSalvar, BtnFechar } from "./Botoes";
 
 
 const FormularioDoador =()=>{
@@ -20,8 +21,8 @@ const FormularioDoador =()=>{
     return(
     <div className="container">
        <div className="row">
-           <div className="col-12 mb-4">
-               <h1>Quero Doar</h1>
+           <div className="col-12 mt-4 mb-4">
+               <h1>Cadastro do Doador</h1>
             </div>
        </div>
 
@@ -56,8 +57,16 @@ const FormularioDoador =()=>{
                 
                 </div>
             </div>
-            
+            <div className='form-group col-12 justify-content-end align-items-end'>
+                <div className='d-flex justify-content-end'>
+                    <BtnSalvar/>
+                    <BtnFechar/>
+             </div>
+            </div>
         </form>
+
+       
+
     </div>
     )
 }
