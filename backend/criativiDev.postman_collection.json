@@ -1674,7 +1674,22 @@
 					"name": "Busco todas as propostas completadas para um receptor",
 					"request": {
 						"method": "GET",
-						"header": []
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/matches/finishedSolicitations/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"matches",
+								"finishedSolicitations",
+								"2"
+							]
+						}
 					},
 					"response": [
 						{
@@ -1716,15 +1731,15 @@
 								},
 								{
 									"key": "Content-Length",
-									"value": "148"
+									"value": "151"
 								},
 								{
 									"key": "ETag",
-									"value": "W/\"94-3co+AINUrN3tgxnMqcOz6brn+SE\""
+									"value": "W/\"97-oED1he0pqzD00sENvhddr9oRums\""
 								},
 								{
 									"key": "Date",
-									"value": "Sat, 28 May 2022 20:13:37 GMT"
+									"value": "Sat, 28 May 2022 20:27:31 GMT"
 								},
 								{
 									"key": "Connection",
@@ -1736,7 +1751,7 @@
 								}
 							],
 							"cookie": [],
-							"body": "{\n    \"data\": [\n        {\n            \"solicitation_id\": 1,\n            \"category_id\": 5\n        },\n        {\n            \"solicitation_id\": 5,\n            \"category_id\": 6\n        }\n    ],\n    \"message\": \"Donation and solicitation link found successfully\"\n}"
+							"body": "{\n    \"data\": [\n        {\n            \"solicitation_id\": 1,\n            \"name\": \"DESKTOP\"\n        },\n        {\n            \"solicitation_id\": 5,\n            \"name\": \"NOTEBOOK\"\n        }\n    ],\n    \"message\": \"Donation and solicitation link found successfully\"\n}"
 						}
 					]
 				}

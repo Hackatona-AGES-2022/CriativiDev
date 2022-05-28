@@ -52,14 +52,6 @@ const TelaDoadorLogado =()=> {
             console.log(err);
           }
         };
-        const getDonations = async () => {
-            try {
-              const getUserResponse = await getUserById(sessionUser.id);
-              setUser(getUserResponse);
-            } catch (err) {
-              console.log(err);
-            }
-        };
         getCategories();
         getUser();
     }, []);

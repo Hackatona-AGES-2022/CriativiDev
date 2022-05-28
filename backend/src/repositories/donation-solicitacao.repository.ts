@@ -14,10 +14,11 @@ export async function create(donation_id: number, solicitation_id: number) {
 
 export async function findByReceiverId(receiver_id: number) {
   const createdDonation = await db<Solicitacao>(tableName)
-    .select(['donations_solicitations.solicitation_id', 'solicitacoes.category_id'])
+    .select(['donations_solicitations.solicitation_id', 'categories.name'])
     .innerJoin('solicitacoes', 'solicitacoes.request_id', 'donations_solicitations.solicitation_id')
+    .innerJoin('categories', 'categories.id', 'solicitacoes.category_id')
     .where('solicitacoes.user_id', receiver_id)
-    .returning(['donations_solicitations.solicitation_id', 'solicitacoes.category_id']);
+    .returning(['donations_solicitations.solicitation_id', 'categorias.name']);
 
   if (!createdDonation) {
       throw new Error(`Could not get solicitations from receiver ${receiver_id}`);

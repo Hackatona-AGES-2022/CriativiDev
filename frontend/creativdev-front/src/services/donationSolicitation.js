@@ -25,12 +25,23 @@ export async function getMatchesBySolicitationId(solicitation_id) {
 }
 
 export async function getMatchesByDonationId(donation_id) {
-    let response = null;
-    await api
-      .get(`${serviceName}/donations/${donation_id}`)
-      .then((data) => (response = data.data))
-      .catch((error) => {
-        throw error;
-      });
-    return response;
+  let response = null;
+  await api
+    .get(`${serviceName}/donations/${donation_id}`)
+    .then((data) => (response = data.data))
+    .catch((error) => {
+      throw error;
+    });
+  return response;
+}
+
+export async function getMatchesByReceiverId(receiver_id) {
+  let response = null;
+  await api
+    .get(`${serviceName}/finishedSolicitations/${receiver_id}`)
+    .then((data) => (response = data.data.data))
+    .catch((error) => {
+      throw error;
+    });
+  return response;
 }
