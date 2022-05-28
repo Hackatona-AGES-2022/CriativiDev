@@ -28,7 +28,7 @@ export const Cadastro = () => {
             <input type="radio" name="tipo_pessoa" id="" class="doador"/>
             <input type="radio" name="tipo_pessoa" id="" class="receptor"/>
             <input type="submit" value="Salvar" class="btn-cad submit-cad"/>
-            <a href="/home"><input type="button" value="Voltar" class="btn-cad back-cad" /></a>
+            <a href="/"><input type="button" value="Voltar" class="btn-cad back-cad" /></a>
         </form>
     </main>
     </div>
