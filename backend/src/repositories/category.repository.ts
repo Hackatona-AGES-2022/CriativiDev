@@ -12,17 +12,32 @@ export async function create(category: Category): Promise<Category> {
 }
 
 export async function findById(id: number): Promise<Category> {
-    const createdCategory = await db<Category>(tableName)
-      .select('*')
-      .where({ id })
-      .returning('*')
-      .first();
+  const createdCategory = await db<Category>(tableName)
+    .select('*')
+    .where({ id })
+    .returning('*')
+    .first();
 
-    if (!createdCategory) {
-        throw new Error(`Category with id ${id} does not exist`);
-    }
+  if (!createdCategory) {
+      throw new Error(`Category with id ${id} does not exist`);
+  }
 
-    return createdCategory as Category;
+  return createdCategory as Category;
+}
+
+export async function findByName(tr: any, name: string): Promise<Category> {
+  const createdCategory = await db<Category>(tableName)
+    .transacting(tr)
+    .select('*')
+    .where({ name })
+    .returning('*')
+    .first();
+
+  if (!createdCategory) {
+      throw new Error(`Category with name ${name} does not exist`);
+  }
+
+  return createdCategory as Category;
 }
 
 export async function findAll(): Promise<Array<Category>> {

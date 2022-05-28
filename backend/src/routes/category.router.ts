@@ -7,9 +7,7 @@ const router = Router();
 router.get('/:id', async (req: Request, res: Response) => {
     const categoryId = Number(req.params.id);
     const response = await categoryService.getById(categoryId);
-    console.log(response);
     if (response instanceof ApiError) {
-        console.log('aqui');
         const { code, ...responseData } = response;
         return res.status(code).json(responseData);
     }

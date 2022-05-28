@@ -9,7 +9,6 @@ export async function getById(id: number) {
       await categoryRepository.findById(id)
     );
   } catch(err: any) {
-    console.log('aqui');
     return ApiError.createApiError(err.message, 400);
   }
 }
