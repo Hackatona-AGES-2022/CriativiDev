@@ -12,15 +12,11 @@ export const Homescreen = () => {return(
             <img src={desenho1} class="img-fluid" alt="Responsive image" width="700" height="700" position="absolute" />
             <div class="pe-5 mt-5">
               <h1>DoaTech</h1>
-              <h4>
-                Em novembro de 2020, mais de 2 milhões de crianças com idade entre 6 e 10 anos não tiveram acesso a educação no Brasil.
-                No total foram 5,1 milhões de crianças e adolescentes até 17 anos que tiveram o seu direito à educação negado. Segundo 
-                uma pesquisa produzida em parceria pelo UNICEF e CENPEC Educação.
+              <h4>Somos uma empresa de  desenvolvedores que visa alcançar a meta de tornar a internet mais acessível para as pessoas de baixa renda e ajudar outros que precisem se desfazer de eletrônicos que estão em desuso.
               </h4>
               <h1>Nossa missão</h1>
-              <h4>
-                Tornar a informação via tecnologia, um dierito de todos.
-              </h4>
+              <h4>Através da doação, pessoas que, ao invés de vender ou até mesmo jogar fora seus eletrônicos, tem a oportunidade de receber recompensas à medida que fizerem doações para a nossa empresa.
+    Essas doações serão encaminhadas para outros usuários que requisitarão doações, assim como para instituições públicas que necessitam desse apoio.</h4>
             </div>
       </div>
         <hr />
