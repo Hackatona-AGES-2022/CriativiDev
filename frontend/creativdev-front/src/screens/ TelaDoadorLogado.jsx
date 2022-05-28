@@ -5,6 +5,7 @@ import { HeaderDonator } from '../containers/Header';
 import { BtnSalvar, BtnFechar } from "../components/Botoes";
 import { Card } from "../components/Card";
 import plus from "../assets/plus.png"
+import circle from "../assets/circle-scatter-haikei.png"
 
 
 const TelaDoadorLogado =()=> {
@@ -28,6 +29,12 @@ const TelaDoadorLogado =()=> {
         }, 
         spacingPlusButton: {
             paddingLeft: "12px",
+        },
+        imgTeste:{
+            position: "fixed",
+            bottom: "0",
+            right: "0",
+            width: "450px",
         },
     }
 
@@ -65,13 +72,14 @@ const TelaDoadorLogado =()=> {
     }, []);
 
     return(
-    <div className="container-fluid">
+    <div className="container-fluid" >
         
         <HeaderDonator/>
 
+<div className="container" style={styles.teste}>
 
         <div className="row">
-    <div className="col-6">
+    <div className="col-5 ">
         <div className="row ps-5">
             <div style={styles.teste}>
                 <div>
@@ -89,6 +97,10 @@ const TelaDoadorLogado =()=> {
         </div>
     </div>
     <div className="col-6 pe-5">
+        <h1>Como funciona ?</h1>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptates officia ex non deserunt debitis recusandae aut error numquam quia possimus doloremque modi sed reiciendis provident dolores temporibus, corporis minus dignissimos.</p>
+        <h1>Sistema de recompensas</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur eveniet exercitationem fugit fuga quibusdam nemo tempora suscipit impedit consequuntur tempore maiores, explicabo harum, omnis dolor. Quas repudiandae possimus maiores dolor.</p>
     <div className="row">
         <div className="col-12">                        
                 <table className='table table-bordered table-responsive mt-4'>
@@ -126,10 +138,13 @@ const TelaDoadorLogado =()=> {
                     </tr>
                     </tbody>
                 </table></div>
+
 </div>
     </div>
     </div>
-    
+        
+    </div>
+    <img src={circle} alt="" style={styles.imgTeste}/>  
     </div>
 
 
