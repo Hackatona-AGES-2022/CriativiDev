@@ -3,7 +3,7 @@ import { HeaderReciever } from '../containers/Header';
 import { BtnSalvar, BtnFechar } from "../components/Botoes";
 import { Card } from "../components/Card";
 import plus from "../assets/plus.png"
-
+import { CadastroeSolicitacaoDoacao } from "../containers/CadastroeSolicitacaoDoacao";
 
 const TelaReceptorLogado =()=>{
 
@@ -31,50 +31,27 @@ const TelaReceptorLogado =()=>{
     }
 
     return(
-    <div className="container-fluid">
-        
+    <div>
         <HeaderReciever/>
-
         <div className="container">
-
-<div className="row">
-    <div className="col-4">
-        <h2>Doações Recebidas</h2>
-        <ul>
-            <li>1 Notebook</li>
-            <li>1 Teclado</li>
-            <li>1 Celular</li>
-        </ul>
-    </div>
-    <div className="col-8">
-    <form style={styles.form}>
-            <h2 className="mt-4">Solicitar Doações</h2>
-
             <div className="row">
-                <div className="form-group col-12 ">
-                    <div className="mb-2"> 
-                        <label for="produto" style={styles.labels}>Produto</label>
-                        <input className="form-control" type="text" id="produto"/>
-                    </div>
-                    <div className="mb-2"> 
-                        <label for="descricao" style={styles.labels}>Descrição da Solicitação</label>
-                        <textarea  class = "me-4"name="descricao" id="" cols="37" rows="10"></textarea>
-                    </div>
-                   
+                <div className="d-flex justify-content-center pb-5">
+                    <h2>Doações Recebidas</h2>
+                    <ul>
+                        <li>1 Notebook</li>
+                        <li>1 Teclado</li>
+                        <li>1 Celular</li>
+                    </ul>
                 </div>
-            </div>
-            <div className='form-group col-12 justify-content-end align-items-end'>
-                <div className='d-flex justify-content-end'>
-                    <BtnSalvar/>
-                    <BtnFechar/>
-             </div>
-            </div>
-        </form></div>
+                </div>
+            <h1 class = 'd-flex justify-content-center'>Cadastro de doação</h1>
+            <div class = 'd-flex justify-content-center'>
 
-</div>
+            <CadastroeSolicitacaoDoacao />   
+            </div>
+         </div>
     </div>
     
-    </div>
     )
 }
 export default TelaReceptorLogado;
