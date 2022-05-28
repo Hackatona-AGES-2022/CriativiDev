@@ -35,9 +35,10 @@ const TelaReceptorLogado =()=>{
         <HeaderReciever/>
         <div className="container">
             <div className="row">
+            <h1 class = 'd-flex justify-content-center'>Doações Recebidas</h1>
+
                 <div className="d-flex justify-content-center pb-5">
-                    <h2>Doações Recebidas</h2>
-                    <ul>
+                    <ul >
                         <li>1 Notebook</li>
                         <li>1 Teclado</li>
                         <li>1 Celular</li>

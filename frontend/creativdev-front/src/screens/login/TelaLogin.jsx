@@ -60,7 +60,7 @@ export const TelaLogin = () => {
             class="meu-btn submit"
             onClick={() => handleSubmit()}
           />
-          <a href="/">
+          <a href="/home">
             <input type="button" value="Voltar" class="meu-btn back" />
           </a>
         </form>

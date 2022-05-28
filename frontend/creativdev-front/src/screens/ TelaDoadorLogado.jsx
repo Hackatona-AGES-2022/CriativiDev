@@ -5,7 +5,6 @@ import { HeaderDonator } from '../containers/Header';
 import { BtnSalvar, BtnFechar } from "../components/Botoes";
 import { Card } from "../components/Card";
 import plus from "../assets/plus.png"
-import circle from "../assets/circle-scatter-haikei.png"
 
 
 const TelaDoadorLogado =()=> {
@@ -30,15 +29,9 @@ const TelaDoadorLogado =()=> {
         spacingPlusButton: {
             paddingLeft: "12px",
         },
-        imgTeste:{
-            position: "fixed",
-            bottom: "0",
-            right: "0",
-            width: "450px",
-        },
     }
 
-    const [categories, setCategories] = useState([]);
+    const [categories, setCategories] = useState('');
     const [user, setUser] = useState('');
 
     useEffect(() => {
@@ -72,21 +65,20 @@ const TelaDoadorLogado =()=> {
     }, []);
 
     return(
-    <div className="container-fluid" >
+    <div className="container-fluid">
         
         <HeaderDonator/>
 
-<div className="container" style={styles.teste}>
 
         <div className="row">
-    <div className="col-5 ">
+    <div className="col-6">
         <div className="row ps-5">
             <div style={styles.teste}>
                 <div>
         <h1>Minhas Doações</h1>
-        <h4>{`Pontuação total: ${user.totalPoints || 0} pontos`}</h4>
+        <h4>Pontuação total: 200 pontos</h4>
         </div>
-        <a class="plus-donate" href="/cadastro-doacao">        
+        <a class="plus-donate" href="#">        
             <img src={plus} alt="" width="50" height="38" style={styles.spacingPlusButton} />
         </a>
 
@@ -97,10 +89,6 @@ const TelaDoadorLogado =()=> {
         </div>
     </div>
     <div className="col-6 pe-5">
-        <h1>Como funciona ?</h1>
-        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptates officia ex non deserunt debitis recusandae aut error numquam quia possimus doloremque modi sed reiciendis provident dolores temporibus, corporis minus dignissimos.</p>
-        <h1>Sistema de recompensas</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur eveniet exercitationem fugit fuga quibusdam nemo tempora suscipit impedit consequuntur tempore maiores, explicabo harum, omnis dolor. Quas repudiandae possimus maiores dolor.</p>
     <div className="row">
         <div className="col-12">                        
                 <table className='table table-bordered table-responsive mt-4'>
@@ -111,22 +99,37 @@ const TelaDoadorLogado =()=> {
                         </tr>
                     </thead>
                     <tbody className='text-center font-weight-bold'>
-                    {categories.map((category) => {
-                        return (
-                          <tr>
-                            <td>{category.name}</td>
-                            <td>{category.points}</td>
-                          </tr>
-                        );
-                    })}
+                    <tr>
+    
+                        <td>Monitor</td>
+                        <td>50</td>
+                    </tr>
+                    <tr>
+                        
+                        <td>Celular</td>
+                        <td>70</td>
+                    </tr>
+                    <tr>
+                        
+                        <td>Tablet</td>
+                        <td>70</td>
+                    </tr>
+                    <tr>
+                        
+                        <td>Desktop</td>
+                        <td>100</td>
+                    </tr>
+                    <tr>
+                        
+                        <td>Notebook</td>
+                        <td>100</td>
+                    </tr>
                     </tbody>
                 </table></div>
-        </div>
+</div>
     </div>
     </div>
-        
-    </div>
-    <img src={circle} alt="" style={styles.imgTeste}/>  
+    
     </div>
 
 

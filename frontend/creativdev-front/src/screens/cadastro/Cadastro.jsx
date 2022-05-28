@@ -19,7 +19,9 @@ export const Cadastro = () => {
     try {
       const payload = { name, document, email, birth_date, cep, password, type };
       const response = await registerUser(payload);
-      navigate("/");
+      localStorage.removeItem('logged');
+      if (response.type === "DOADOR") navigate("/doador-logado");
+      else if (response.type === "RECEPTOR") navigate("/receptor-logado");
     } catch (err) {
       console.log(err);
     }
