@@ -72,16 +72,6 @@ export const CadastroeSolicitacaoDoacao = () => {
 
   return (
     <form style={styles.main} action="">
-      <label for="drop-down">Descreva o produto (especificações...)</label>
-      <div class="input-group">
-        <textarea
-          class="form-control me-4"
-          aria-label="With textarea"
-          value={description}
-          onChange={(e) => setDescription(e.target.value)}
-        ></textarea>
-      </div>
-      <br />
       <label for="drop-down">Selecione o tipo de equipamento desejado</label>
       <select
         class="form-select"
@@ -93,6 +83,16 @@ export const CadastroeSolicitacaoDoacao = () => {
           return <option value={index}>{category.name}</option>;
         })}
       </select>
+      <br />
+      <label for="drop-down">Descreva o produto (especificações...)</label>
+      <div class="input-group">
+        <textarea
+          class="form-control me-4"
+          aria-label="With textarea"
+          value={description}
+          onChange={(e) => setDescription(e.target.value)}
+        ></textarea>
+      </div>
       <br />
       <input
         style={styles.btn}

@@ -17,13 +17,13 @@ import logo from "../assets/LOGO.png";
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav ml-5 mb-2 me-5 mb-lg-0 mx-auto justify-content-center">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        <a class="nav-link active" aria-current="page" href="/">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Minhas Doações</a>
+                        <a class="nav-link active" aria-current="page" href="/doador-logado">Minhas Doações</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Realizar Doações</a>
+                        <a class="nav-link active" aria-current="page" href="/cadastro-doacao">Realizar Doações</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="#">Sobre</a>
@@ -52,13 +52,13 @@ import logo from "../assets/LOGO.png";
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav ml-5 mb-2 mb-lg-0 mx-auto justify-content-center">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        <a class="nav-link active" aria-current="page" href="/">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Doações Recebidas</a>
+                        <a class="nav-link active" aria-current="page" href="/receptor-logado">Doações Recebidas</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Solicitar Doações</a>
+                        <a class="nav-link active" aria-current="page" href="/cadastro-solicitacao">Solicitar Doações</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="#">Sobre</a>
@@ -85,7 +85,7 @@ import logo from "../assets/LOGO.png";
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav ml-5 mb-2 mb-lg-0 mx-auto justify-content-center">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        <a class="nav-link active" aria-current="page" href="/">Home</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="#">Sobre</a>
