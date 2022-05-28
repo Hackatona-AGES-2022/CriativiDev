@@ -3,7 +3,6 @@ import * as solicitacaoService from "../services/solicitacao.service";
 import { CreateSolicitacaoPayload } from "../models/solicitacao";
 import ApiError from "../models/apiError";
 
-
 const router = Router();
 
 router.post('/', async (req: Request, res: Response) => {
@@ -27,7 +26,12 @@ router.get(
   '/:id',
   async (req: Request, res: Response) => {
     const id: number = Number(req.params.id);
-    return res.json(await solicitacaoService.getById(id));
+    const response = await solicitacaoService.getById(id)
+    if (response instanceof ApiError) {
+      const { code, ...responseData } = response;
+      return res.status(code).json(responseData);
+    }
+    return res.json(response);
   }
 )
 

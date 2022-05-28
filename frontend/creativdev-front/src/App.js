@@ -1,12 +1,13 @@
 import logo from './logo.svg';
-import './App.css';
 import FormularioDoador from './components/FormularioDoador';
-import {HeaderReciever, HeaderDonator, HeaderLogin} from './containers/Header'
+import {Homescreen} from './screens/Homescreen'
+import Routes from './routes/routes';
 
 function App() {
   return (
     <div className="App">
-      <HeaderLogin />
+
+      <Routes />
 
     </div>
   );
