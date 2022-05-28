@@ -1307,7 +1307,76 @@
 							]
 						}
 					},
-					"response": []
+					"response": [
+						{
+							"name": "Sucesso",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"donation_id\": 1,\r\n    \"solicitation_id\": 1\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/v1/matches",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"v1",
+										"matches"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "110"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"6e-4HqT0/6fgj82HV4uGSt4uWJVddA\""
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 28 May 2022 20:05:00 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"solicitation_id\": 1,\n        \"donation_id\": 1\n    },\n    \"message\": \"Donation and solicitation link created successfully\"\n}"
+						}
+					]
 				},
 				{
 					"name": "Buscar match por ID da doação",
@@ -1598,6 +1667,76 @@
 							],
 							"cookie": [],
 							"body": "{\n    \"data\": {\n        \"solicitation_id\": 3,\n        \"donation_id\": 2\n    },\n    \"message\": \"Donation and solicitation link found successfully\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Busco todas as propostas completadas para um receptor",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": [
+						{
+							"name": "Sucesso",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/api/v1/matches/finishedSolicitations/2",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"v1",
+										"matches",
+										"finishedSolicitations",
+										"2"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "148"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"94-3co+AINUrN3tgxnMqcOz6brn+SE\""
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 28 May 2022 20:13:37 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": [\n        {\n            \"solicitation_id\": 1,\n            \"category_id\": 5\n        },\n        {\n            \"solicitation_id\": 5,\n            \"category_id\": 6\n        }\n    ],\n    \"message\": \"Donation and solicitation link found successfully\"\n}"
 						}
 					]
 				}
