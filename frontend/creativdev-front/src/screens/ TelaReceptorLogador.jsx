@@ -58,7 +58,7 @@ const TelaReceptorLogado =()=>{
                     </div>
                     <div className="mb-2"> 
                         <label for="descricao" style={styles.labels}>Descrição da Solicitação</label>
-                        <textarea name="descricao" id="" cols="37" rows="10"></textarea>
+                        <textarea  class = "me-4"name="descricao" id="" cols="37" rows="10"></textarea>
                     </div>
                    
                 </div>
