@@ -36,6 +36,7 @@ const TelaReceptorLogado =()=>{
         setMatchPerCategory(categories.map(category => {
             return matchList.filter(match => match.name === category.name).length;
         }));
+        console.log(matchPerCategory);
     }, []);
 
     const styles = {
