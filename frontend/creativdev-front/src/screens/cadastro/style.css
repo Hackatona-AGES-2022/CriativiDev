@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+ *{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins' , sans-serif;
+}
+
+.meu-body{
+   width: 100%;
+   height: 120%;
+   display: flex;
+}
+
+.container-img-cadastro{
+    width: 55%;
+    height: 100vh;
+    background-color: rgba(255, 102, 102, 0.8);
+    opacity: 0.7;
+    position: relative;
+}
+
+.degrade{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #FF6666;
+    opacity: 0.6;
+}
+
+.img-cad{
+    width: 100%;
+    height: 100%;
+}
+
+.main-cadastro{
+    width: 40%;
+    height: 100%;
+}
+
+.form-cad{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 40px;
+    padding-top: 0px;
+}
+
+.entrada-cad{
+    padding: 10px;
+    width: 300px;
+    border-radius: 4px;
+    outline: none;
+    margin-bottom: 10px;
+}
+
+.btn-cad{
+    padding: 10px;
+    width: 300px;
+    border-radius: 4px;
+    transition: 0.5s ease;
+    cursor: pointer;
+    border: none;
+    margin: 5px 0 5px 0;
+}
+
+.submit-cad{
+    color: #fff;
+    background-color: #FF6666;
+    border: none;
+}
+
+.back-cad{
+    border: 1px solid #000;
+    background-color: #fff;
+}
+
+input[type='radio']{
+    margin: 10px 0;
+    position: relative;
+}
+
+.doador::before{
+    content: 'Doador';
+    position: relative;
+    right: -17px;
+}
+
+.receptor::before{
+    content: 'Receptor';
+    position: relative;
+    right: -17px;
+}
