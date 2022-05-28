@@ -1,21 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-*{
+ *{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
     font-family: 'Poppins' , sans-serif;
 }
 
-body{
+.meu-body{
    width: 100%;
    height: 120%;
    display: flex;
 }
 
-.container-img{
+.container-img-cadastro{
     width: 55%;
-    height: 160vh;
+    height: 100vh;
     background-color: rgba(255, 102, 102, 0.8);
     opacity: 0.7;
     position: relative;
@@ -30,34 +30,34 @@ body{
     opacity: 0.6;
 }
 
-img{
+.img-cad{
     width: 100%;
     height: 100%;
 }
 
-main{
+.main-cadastro{
     width: 40%;
     height: 100%;
 }
 
-form{
-    height: 160vh;
+.form-cad{
+    height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     padding-left: 40px;
-    padding-top: 30px;
+    padding-top: 0px;
 }
 
-.entrada{
+.entrada-cad{
     padding: 10px;
     width: 300px;
     border-radius: 4px;
     outline: none;
-    margin: 10px 0 30px 0;
+    margin: 10px 0 10px 0;
 }
 
-.btn{
+.btn-cad{
     padding: 10px;
     width: 300px;
     border-radius: 4px;
@@ -67,13 +67,13 @@ form{
     margin: 20px 0 10px 0;
 }
 
-.submit{
+.submit-cad{
     color: #fff;
     background-color: #FF6666;
     border: none;
 }
 
-.back{
+.back-cad{
     border: 1px solid #000;
     background-color: #fff;
 }
