@@ -13,17 +13,17 @@ export async function create(donation: Donation): Promise<Donation> {
 }
 
 export async function findById(id: number): Promise<Donation> {
-    const createdDonation = await db<Donation>(tableName)
-      .select('*')
-      .where({ id })
-      .returning('*')
-      .first();
+  const createdDonation = await db<Donation>(tableName)
+    .select('*')
+    .where({ id })
+    .returning('*')
+    .first();
 
-    if (!createdDonation) {
-        throw new Error(`Donation with id ${id} does not exist`);
-    }
+  if (!createdDonation) {
+      throw new Error(`Donation with id ${id} does not exist`);
+  }
 
-    return createdDonation as Donation;
+  return createdDonation as Donation;
 }
 
 export async function searchByCategory(categoryName: string): Promise<Array<Donation>> {
