@@ -1,9 +1,15 @@
 import React from 'react';
 import {HeaderReciever, HeaderDonator, HeaderLogin} from '../containers/Header'
-import hands from "../assets/two_hands.png";
 import desenho1 from "../assets/desenho1.png"
 import desenho2 from "../assets/desenho2.png"
 import team from "../assets/team.png"
+import kobe from "../assets/kobe.png"
+import adp from "../assets/ADP-logo-1.jpg"
+import ecore from "../assets/logo_e-core.png"
+import eldorado from "../assets/Logo-Eldorado-Color-160.png"
+import globo from "../assets/logo-globo-fundo-cinza.png"
+
+
 
 
 export const Homescreen = () => {
@@ -12,6 +18,10 @@ export const Homescreen = () => {
         width:'70%',
         margin:'0 auto',
     },
+    image:{
+      width:'250px',
+      height:'150px'
+    }
 }
   
   
@@ -62,6 +72,20 @@ export const Homescreen = () => {
              
             </div>
       </div>
+
+      <hr/>
+
+      <div className="row mb-5">
+        <div className="col-12 text-center">
+          <h1 className='my-5'>Apoiadores:</h1>
+          </div>
+          <img src={adp} style={styles.image} class="img-fluid" alt="Responsive image"  position="absolute" />
+          <img src={globo} style={styles.image} class="img-fluid" alt="Responsive image"  position="absolute" />
+          <img src={kobe} style={styles.image} class="img-fluid" alt="Responsive image"  position="absolute" />
+          <img src={eldorado} style={styles.image} class="img-fluid" alt="Responsive image"  position="absolute" />
+          <img src={ecore} style={styles.image} class="img-fluid" alt="Responsive image"  position="absolute" />
+        
+        </div>
 
       </div>
       
