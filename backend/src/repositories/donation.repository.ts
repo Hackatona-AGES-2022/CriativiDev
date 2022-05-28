@@ -26,6 +26,20 @@ export async function findById(id: number): Promise<Donation> {
   return createdDonation as Donation;
 }
 
+export async function findPointsByDonatorId(donatorId: number): Promise<number> {
+  const [donationData] = await db<Donation>(tableName)
+    .select([
+      db.raw('SUM(categories.points) as totalPoints'),
+      'donations.user_id',
+    ])
+    .innerJoin('categories', 'donations.category_id', 'categories.id')
+    .where('donations.user_id', donatorId)
+    .groupBy('donations.user_id');
+  
+
+  return Number(donationData.totalpoints);
+}
+
 export async function searchByCategory(categoryName: string): Promise<Array<Donation>> {
   return await db.transaction(async (tr) => {
     const foundCategory = await categoryRepository.findByName(tr, categoryName);
