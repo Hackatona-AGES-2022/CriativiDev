@@ -3,6 +3,7 @@ import { getAllCategories } from "../services/category";
 import { getUserById } from "../services/user";
 import { HeaderDonator } from '../containers/Header';
 import { BtnSalvar, BtnFechar } from "../components/Botoes";
+import { useNavigate }from 'react-router-dom';
 import { Card } from "../components/Card";
 import plus from "../assets/plus.png"
 
@@ -33,6 +34,7 @@ const TelaDoadorLogado =()=> {
 
     const [categories, setCategories] = useState('');
     const [user, setUser] = useState('');
+    const navigate = useNavigate();
 
     useEffect(() => {
         const sessionUser = JSON.parse(sessionStorage.getItem("user") || "{}");
@@ -69,9 +71,8 @@ const TelaDoadorLogado =()=> {
         
         <HeaderDonator/>
 
-
         <div className="row">
-    <div className="col-6">
+        <div className="col-6">
         <div className="row ps-5">
             <div style={styles.teste}>
                 <div>
@@ -79,7 +80,8 @@ const TelaDoadorLogado =()=> {
         <h4>Pontuação total: 200 pontos</h4>
         </div>
         <a class="plus-donate" href="#">        
-            <img src={plus} alt="" width="50" height="38" style={styles.spacingPlusButton} />
+            <img src={plus} alt="" width="50" height="38" style={styles.spacingPlusButton} 
+            onClick={() => navigate('/cadastro-doacao')} />
         </a>
 
         </div>
