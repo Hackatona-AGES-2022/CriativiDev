@@ -2,13 +2,12 @@ import logo from './logo.svg';
 import './App.css';
 import FormularioDoador from './components/FormularioDoador';
 import {Homescreen} from './screens/Homescreen'
-import Card from './components/Card'
+import Routes from './routes/routes';
 
 function App() {
   return (
     <div className="App">
-      <Card />
-
+      <Routes />
     </div>
   );
 }
