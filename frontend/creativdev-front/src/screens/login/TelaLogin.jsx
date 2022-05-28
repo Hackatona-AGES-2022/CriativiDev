@@ -12,8 +12,8 @@ export const TelaLogin = () => {return(
             <input type="email"  id="email" class="entrada" placeholder="Digite seu e-mail" />
             <label className="minhalabel" for="senha">Senha</label>
             <input type="password" id="senha" class="entrada" placeholder="Digite seu e-mail" />
-            <p><a  className="meu-a"href="/cadastro">Não possui conta ainda?</a></p>
-            <input type="submit" value="Entrar" class="meu-btn submit" />
+            <p className="p-meu"><a  className="meu-a"href="/cadastro">Não possui conta ainda?</a></p>
+            <a href="/doador-logado"><input type="button" value="Entrar" class="meu-btn submit" /></a>
             <a href="/home"><input type="button" value="Voltar" class="meu-btn back" /></a>
             
         </form>

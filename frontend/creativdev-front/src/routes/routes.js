@@ -9,6 +9,7 @@ import {
 // Páginas
 import { Homescreen } from '../screens/Homescreen';
 import TelaDoadorLogado from '../screens/ TelaDoadorLogado';
+import TelaReceptorLogado from '../screens/ TelaReceptorLogador';
 import { TelaLogin } from '../screens/login/TelaLogin';
 import {Cadastro} from '../screens/cadastro/Cadastro';
 
@@ -22,6 +23,7 @@ export default function Routes() {
             </Route>
                 <Route exact path='/home' component={Homescreen} />               
                 <Route exact path='/doador-logado' component={TelaDoadorLogado} />
+                <Route exact path='/receptor-logado' component={TelaReceptorLogado} />
                 <Route exact path='/login-doador' component={TelaLogin} />
                 <Route exact path='/cadastro' component={Cadastro} />
             </Switch>
