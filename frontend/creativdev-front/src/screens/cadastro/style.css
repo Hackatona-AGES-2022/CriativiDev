@@ -54,7 +54,7 @@
     width: 300px;
     border-radius: 4px;
     outline: none;
-    margin: 10px 0 10px 0;
+    margin-bottom: 10px;
 }
 
 .btn-cad{
@@ -64,7 +64,7 @@
     transition: 0.5s ease;
     cursor: pointer;
     border: none;
-    margin: 20px 0 10px 0;
+    margin: 5px 0 5px 0;
 }
 
 .submit-cad{
