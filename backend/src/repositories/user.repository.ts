@@ -36,12 +36,16 @@ export async function findAll(): Promise<Array<User>>{
   return userData as Array<User>;
 }
 
-export async function findById(id:number): Promise<User>{
+export async function findById(id: number): Promise<User>{
   const userData = await db<User>(tableName)
     .select(fields)
     .where({id})
     .returning(fields)
     .first();
+
+  if (!userData) {
+    throw new Error(`User with id ${id} does not exist`);
+  }
 
   return userData as User;
 }
