@@ -1,17 +1,13 @@
 import ApiError from "../models/apiError";
 import ApiResponse from "../models/apiResponse";
 import { Solicitacao } from "models/solicitacao";
-import * as solicitacaoRepository from "../repositories/solicitacao.repository"
+import * as solicitacaoRepository from "../repositories/solicitacao.repository";
 
 export async function getAll(): Promise<ApiResponse>{
   return ApiResponse.createApiResponse(
     'Solicitation created successfully',
     await solicitacaoRepository.findAll(),
   );
-}
-
-export async function getById(id: number): Promise<Solicitacao>{
-  return solicitacaoRepository.findById(id);
 }
 
 export async function create(solicitacao: Solicitacao): Promise<ApiResponse | ApiError>{
@@ -22,6 +18,8 @@ export async function create(solicitacao: Solicitacao): Promise<ApiResponse | Ap
     );
   } catch(err: any) {
     return ApiError.createApiError(err.message, 500);
+  }
+}
 
 export async function getById(id: number): Promise<ApiResponse | ApiError>{
   try {
