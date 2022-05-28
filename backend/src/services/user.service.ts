@@ -27,3 +27,7 @@ export async function getById(id: number): Promise<ApiResponse | ApiError>{
     return ApiError.createApiError(err.message, 400);
   }
 }
+
+export async function login(email: string): Promise<User>{
+  return repository.findByEmail(email);
+}

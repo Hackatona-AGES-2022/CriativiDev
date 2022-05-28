@@ -49,3 +49,17 @@ export async function findById(id: number): Promise<User>{
 
   return userData as User;
 }
+
+export async function findByEmail(email: string): Promise<User>{
+  const userData = await db<User>(tableName)
+    .select(fields)
+    .where({ email })
+    .returning(fields)
+    .first();
+
+  if(!userData) {
+    throw ApiError.createApiError('User not found', 500);
+  }
+
+  return userData as User;
+}
