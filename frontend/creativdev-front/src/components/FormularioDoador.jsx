@@ -21,8 +21,8 @@ const FormularioDoador =()=>{
     return(
     <div className="container">
        <div className="row">
-           <div className="col-12 mb-4">
-               <h1>Quero Doar</h1>
+           <div className="col-12 mt-4 mb-4">
+               <h1>Cadastro do Doador</h1>
             </div>
        </div>
 
