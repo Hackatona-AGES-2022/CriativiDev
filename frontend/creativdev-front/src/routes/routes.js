@@ -12,6 +12,8 @@ import TelaDoadorLogado from '../screens/ TelaDoadorLogado';
 import TelaReceptorLogado from '../screens/ TelaReceptorLogador';
 import { TelaLogin } from '../screens/login/TelaLogin';
 import {Cadastro} from '../screens/cadastro/Cadastro';
+import { CadastroDoacao} from '../screens/CadastroDoacao';
+import { CadastroSolicitacao} from '../screens/CadastroSolicitacao';
 
 
 export default function Routes() {
@@ -26,6 +28,9 @@ export default function Routes() {
                 <Route exact path='/receptor-logado' component={TelaReceptorLogado} />
                 <Route exact path='/login-doador' component={TelaLogin} />
                 <Route exact path='/cadastro' component={Cadastro} />
+                <Route exact path='/cadastro-doacao' component={CadastroDoacao} />
+                <Route exact path='/cadastro-solicitacao' component={CadastroSolicitacao} />
+
             </Switch>
         </Router>
     )
