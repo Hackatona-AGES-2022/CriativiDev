@@ -22,3 +22,11 @@ export async function findById(request_id:number): Promise<Solicitacao>{
 
   return solicitacaoData as Solicitacao;
 }
+
+export async function create(solicitacao: Solicitacao): Promise<Solicitacao> {
+  const [createdSolicitacao] = await db<Solicitacao>(tableName)
+    .insert(solicitacao)
+    .returning('*');
+
+  return createdSolicitacao as Solicitacao;
+}
