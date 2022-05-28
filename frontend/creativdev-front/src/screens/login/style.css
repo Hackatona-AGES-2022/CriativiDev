@@ -93,13 +93,13 @@ p{
     transform: translateY(-5px);
 }
 
-a{
+.meu-a{
     text-decoration: none;
     color: #000;
     transition: 1s all ease;
 }
 
-a:hover{
+.meu-a:hover{
     color: #FF6666;
 }
 
@@ -109,4 +109,7 @@ svg{
     top: 0;
 }
 
-
+a{
+    text-decoration: none;
+    color: inherit;
+}
