@@ -11,17 +11,30 @@ export const Homescreen = () => {return(
         <div class = "d-flex justify-content-center">
             <img src={desenho1} class="img-fluid" alt="Responsive image" width="700" height="700" position="absolute" />
             <div class="pe-5 mt-5">
-            <h2>Sobre o projeto</h2>
-            <h5>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</h5>
-        </div>
-        </div>
+              <h1>DoaTech</h1>
+              <h4>
+                Em novembro de 2020, mais de 2 milhões de crianças com idade entre 6 e 10 anos não tiveram acesso a educação no Brasil.
+                No total foram 5,1 milhões de crianças e adolescentes até 17 anos que tiveram o seu direito à educação negado. Segundo 
+                uma pesquisa produzida em parceria pelo UNICEF e CENPEC Educação.
+              </h4>
+              <h1>Nossa missão</h1>
+              <h4>
+                Tornar a informação via tecnologia, um dierito de todos.
+              </h4>
+            </div>
+      </div>
         <hr />
         <div class = "d-flex justify-content-center mt-7"> 
         <div class="ps-5  mt-5">
-            <h2>Seu papel na sociedade e auxiliando a internet a ser um mundo melhor</h2>
-            <h5>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</h5>
-            </div>
-            <img src={desenho2} class="img-fluid" alt="Responsive image" width="700" height="700" position="absolute" />
+        <h1>Como o doaTech funciona</h1>
+            <h4>
+              Um doador cadastra um eletrônico em nosso sistema, através desse cadastro consigmos achar algúem que possui 
+              necessidade.<br></br>
+              O doador também ganha recompensas com essas doações.<br></br>
+              No fim todos saem ganhando. =) 
+            </h4>
+        </div>
+        <img src={desenho2} class="img-fluid" alt="Responsive image" width="700" height="700" position="absolute" />
         </div>
       </div>
     );
