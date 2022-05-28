@@ -4,7 +4,7 @@ import { User } from "../models/user";
 
 const uniqueViolationCode = '23505';
 
-const fields = ['id', 'name', 'document', 'email', 'birth_date', 'cep', 'password'];
+const fields = ['id', 'name', 'document', 'email', 'birth_date', 'cep', 'password', 'type'];
 const tableName: string = 'users';
 
 export async function create(user: User): Promise<User | ApiError>{

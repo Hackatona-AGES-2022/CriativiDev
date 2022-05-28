@@ -90,14 +90,15 @@ import logo from "../assets/LOGO.png";
                         <a class="nav-link active" aria-current="page" href="#">Sobre</a>
                     </li>
                     </ul>
-                    <button type="button" class="btn btn-dark me-4">Login</button>
-                    <button type="button" class="btn btn-dark me-4">Register</button>
+                    <a href="/login-doador"><button type="button" class="btn btn-dark me-4 py-2 px-4" >Login</button></a>
+                    <a href="/doador-logado"><button type="button" class="btn btn-dark me-4 py-2 px-4" >Register</button></a>
                     <a class="navbar-brand" href="#">
                     <img src={bell} alt="" width="30" height="24" />
                 </a>
                 </div>
             </div>
         </nav>
+
         )
     }
     
