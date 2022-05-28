@@ -1,8 +1,15 @@
 import { Router, Request, Response} from "express";
 import * as service from "../services/user.service"
 
-
 const router = Router();
+
+router.post(
+  '/',
+  async (req: Request, res: Response) => {
+    const userPayload = req.body;
+    return res.json(await service.create(userPayload));
+  }
+)
 
 router.get(
   '/',
