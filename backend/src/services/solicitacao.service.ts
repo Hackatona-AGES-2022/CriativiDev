@@ -1,7 +1,7 @@
 import ApiError from "../models/apiError";
 import ApiResponse from "../models/apiResponse";
 import { Solicitacao } from "models/solicitacao";
-import * as solicitacaoRepository from "../repositories/solicitacao.repository"
+import * as solicitacaoRepository from "../repositories/solicitacao.repository";
 
 export async function getAll(): Promise<ApiResponse>{
   return ApiResponse.createApiResponse(

@@ -7,18 +7,18 @@
     font-family: 'Poppins' , sans-serif;
 }
 
-body{
+.TelaLogin{
     width: 100%;
-    height: 130vh;
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    background: url('./img/blob-scene-haikei.png');
+    background: url('../../assets/blob-scene-haikei.png');
     background-repeat: no-repeat;
     background-size: cover;
 }
 
-main{
+.minhaMain{
     min-width: 40%;
     height: 70%;
     background-color: #EEEEEE;
@@ -28,31 +28,31 @@ main{
 
 }
 
-.container-img{
+.minhaContainer-img{
     width: 300px;
     margin: 0 auto;
 }
 
-img{
+.minha-img{
     width: 100%;
     height: 100%;
 }
 
 
-form{
+.meu-form{
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
-    height: 80%;
+    height: 65%;
     position: relative;
 
 }
 
-label{
+.minhalabel{
     position: relative;
     left: -125px;
-    top: 20px;
+    top: 0px;
 }
 
 .entrada{
@@ -69,7 +69,7 @@ p{
 }
 
 
-.btn{
+.meu-btn{
     padding: 10px;
     width: 300px;
     border-radius: 4px;
@@ -89,7 +89,7 @@ p{
     background-color: #fff;
 }
 
-.btn:hover{
+.meu-btn:hover{
     transform: translateY(-5px);
 }
 
