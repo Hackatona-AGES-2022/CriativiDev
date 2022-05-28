@@ -1,11 +1,16 @@
-export interface ApiError {
-    message: string;
-    code: number;
-}
+export default class ApiError {
+    public code: number;
+    public message: string;
 
-export function createApiError(err: any, code: number): ApiError {
-    return {
-        message: err,
-        code,
+    constructor(
+      code: number,
+      message: string,
+    ) {
+      this.code = code;
+      this.message = message;
+    }
+
+    static createApiError(message: string, code: number): ApiError {
+      return new ApiError(code, message);
     }
 }

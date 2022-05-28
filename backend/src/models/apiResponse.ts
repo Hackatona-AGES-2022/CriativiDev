@@ -1,11 +1,16 @@
-export interface ApiResponse {
-    message: string;
-    data: any;
-}
+export default class ApiResponse {
+    public message: string;
+    public data: any;
 
-export function createApiResponse(message: any, data: any): ApiResponse {
-    return {
-        message,
-        data,
-    }
+    constructor(
+        message: string,
+        data: any,
+      ) {
+        this.data = data;
+        this.message = message;
+      }
+  
+      static createApiResponse(message: string, data: any): ApiResponse {
+        return new ApiResponse(message, data);
+      }
 }

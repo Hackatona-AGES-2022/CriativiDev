@@ -1,11 +1,19 @@
 import { Router, Request, Response } from 'express';
+import ApiError from '../models/apiError';
 import * as categoryService from '../services/category.service';
 
 const router = Router();
 
 router.get('/:id', async (req: Request, res: Response) => {
     const categoryId = Number(req.params.id);
-    return res.json(await categoryService.getById(categoryId));
+    const response = await categoryService.getById(categoryId);
+    console.log(response);
+    if (response instanceof ApiError) {
+        console.log('aqui');
+        const { code, ...responseData } = response;
+        return res.status(code).json(responseData);
+    }
+    return res.json(response);
 });
 
 router.get('/', async (req: Request, res: Response) => {
