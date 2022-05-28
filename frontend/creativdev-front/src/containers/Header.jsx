@@ -84,14 +84,14 @@ import logo from "../assets/LOGO.png";
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav ml-5 mb-2 mb-lg-0 mx-auto justify-content-center">
                     <li class="nav-item">
-                        <a class="nav-link active me-2" aria-current="page" href="#">Home</a>
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="#">Sobre</a>
                     </li>
                     </ul>
-                    <button type="button" class="btn btn-dark me-2">Login</button>
-                    <button type="button" class="btn btn-dark me-3">Register</button>
+                    <button type="button" class="btn btn-dark me-4">Login</button>
+                    <button type="button" class="btn btn-dark me-4">Register</button>
                     <a class="navbar-brand" href="#">
                     <img src={bell} alt="" width="30" height="24" />
                 </a>
